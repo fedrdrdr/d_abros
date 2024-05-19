@@ -5,7 +5,7 @@ import { styled } from '@mui/system';
 interface WorkCardProps {
   image: string;
   title: string;
-  description: string;
+  description?: string;
 }
 
 const StyledCard = styled(Card)({

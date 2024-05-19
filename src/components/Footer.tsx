@@ -6,7 +6,7 @@ import PhoneIcon from '@mui/icons-material/Phone';
 // import VkIcon from '@mui/icons-material/Vk'; // Импортируем иконку ВКонтакте из пакета @mui/icons-material
 
 const FooterContainer = styled(Box)({
-  backgroundColor: '#f5e6cc',
+  backgroundColor: '#FFEFD6',
   padding: '20px 0',
   marginTop: 'auto',
 });

@@ -11,7 +11,7 @@ const LogoContainer = styled('div')({
   alignItems: 'center',
   flexDirection: 'column',
   height: '40vh',
-  backgroundColor: '#f5e6cc',
+  backgroundColor: '#FFEFD6',
 });
 
 const Logo = styled('img')({
