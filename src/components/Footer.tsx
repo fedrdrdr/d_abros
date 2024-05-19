@@ -30,21 +30,24 @@ const Footer: React.FC = () => {
     <FooterContainer>
       <Container>
         <FooterItem>
+          <Typography>⚜️ Мастерская изделий из дерева. Творческий, индивидуальный подход. Любая сложность.</Typography>
+        </FooterItem>
+        <FooterItem>
           <RoomIcon />
           <Typography variant="body1" component="p" marginLeft="10px">
-          Уральская д.18, Санкт-Петербург
+            Уральская д.18, Санкт-Петербург
           </Typography>
         </FooterItem>
         <FooterItem>
           <PhoneIcon />
           <Typography variant="body1" component="p" marginLeft="10px">
-          +7 (981) 105-29-50
+            +7 (981) 105-29-50
           </Typography>
         </FooterItem>
         <FooterItem>
           {/* <VkIcon /> */}
           <FooterLink href="https://vk.com/d.abros" target="_blank">
-           VK d.abros
+            VK d.abros
           </FooterLink>
         </FooterItem>
       </Container>
