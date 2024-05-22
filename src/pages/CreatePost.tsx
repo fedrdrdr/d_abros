@@ -1,4 +1,3 @@
-// CreatePost.tsx
 import React, { useState } from 'react';
 import { addPost } from '../components/auth/firebaseUtils';
 
@@ -14,6 +13,8 @@ const CreatePost: React.FC = () => {
       setTitle('');
       setDescription('');
       setFile(null);
+      console.log('success create post');
+      
     }
   };
 

@@ -1,5 +1,5 @@
 export interface Post {
-  id?: string; // Поле id может быть опциональным, так как его может не быть до создания поста
+  id: string;
   title: string;
   description: string;
   photoURL: string;

@@ -17,7 +17,6 @@ const PostsList: React.FC = () => {
 
   return (
     <div>
-      --------------------------g
       {posts.map((post) => (
         <div key={post.id}>
           <h2>{post.title}</h2>
@@ -25,7 +24,6 @@ const PostsList: React.FC = () => {
           {post.photoURL && <img src={post.photoURL} alt={post.title} />}
         </div>
       ))}
-      m--------------------------
     </div>
   );
 };
