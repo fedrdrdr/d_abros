@@ -1,12 +1,9 @@
-// Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
+// import { getAnalytics } from "firebase/analytics";
 import { getAuth } from "firebase/auth";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+import { getFirestore } from "firebase/firestore";
+import { getStorage } from "firebase/storage";
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
   apiKey: "AIzaSyCjra919ejkYIEikvbunv2djWwyFvv4p9s",
   authDomain: "d-abros.firebaseapp.com",
@@ -17,8 +14,22 @@ const firebaseConfig = {
   measurementId: "G-GNEV0ZV15T"
 };
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-const analytics = getAnalytics(app);
+// const analytics = getAnalytics(app);
 export const auth = getAuth(app);
+export const db = getFirestore(app);
+export const storage = getStorage(app);
+
+// rules_version = '2';
+
+// // Craft rules based on data in your Firestore database
+// // allow write: if firestore.get(
+// //    /databases/(default)/documents/users/$(request.auth.uid)).data.isAdmin;
+// service firebase.storage {
+//   match /b/{bucket}/o {
+//     match /{allPaths=**} {
+//       allow read, write: if false;
+//     }
+//   }
+// }
+
