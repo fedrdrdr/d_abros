@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { auth } from "./firebaseConfig";
 import { signInWithEmailAndPassword } from "firebase/auth";
+import { FirebaseError } from "firebase/app";
 
 const Login: React.FC = () => {
   const [email, setEmail] = useState<string>("");
@@ -11,8 +12,10 @@ const Login: React.FC = () => {
     try {
       const userCredential = await signInWithEmailAndPassword(auth, email, password);
       alert(`User logged in: ${userCredential.user.email}`);
-    } catch (error) {
-      alert(`Error: ${error.code}`);
+    } catch (error: unknown) {
+      if (error instanceof FirebaseError) {
+      alert(`Error: ${error.message}`);
+      }
     }
   };
 
