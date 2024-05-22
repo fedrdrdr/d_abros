@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { auth } from "./firebaseConfig"; 
 import { createUserWithEmailAndPassword } from "firebase/auth";
+import { FirebaseError } from "firebase/app";
 
 const Register: React.FC = () => {
   const [email, setEmail] = useState<string>("");
@@ -10,16 +11,19 @@ const Register: React.FC = () => {
     try {
       const userCredential = await createUserWithEmailAndPassword(auth, email, password);
       alert(`User registered: ${userCredential.user.email}`);
-    } catch (error: any) {
-      // Более детальная обработка ошибок
-      if (error.code === "auth/email-already-in-use") {
-        alert("Email already in use.");
-      } else if (error.code === "auth/invalid-email") {
-        alert("Invalid email.");
-      } else if (error.code === "auth/weak-password") {
-        alert("Weak password.");
+    } catch (error: unknown) {
+      if (error instanceof FirebaseError) {
+        if (error.code === "auth/email-already-in-use") {
+          alert("Email already in use.");
+        } else if (error.code === "auth/invalid-email") {
+          alert("Invalid email.");
+        } else if (error.code === "auth/weak-password") {
+          alert("Weak password.");
+        } else {
+          alert(`Error: ${error.message}`);
+        }
       } else {
-        alert(`Error: ${error.message}`);
+        alert(`Unknown error occurred.`);
       }
     }
   };
