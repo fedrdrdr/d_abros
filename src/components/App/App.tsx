@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Login from '../auth/Login';
 import Register from '../auth/Register';
 import MainPage from '../../pages/MainPage';
+import CreatePost from '../../pages/CreatePost';
 
 function App() {
 
@@ -17,11 +18,15 @@ function App() {
             <li>
               <Link to="/register">Register</Link>
             </li>
+            <li>
+              <Link to="/createPost">Create Post</Link>
+            </li>
           </ul>
         </nav>
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/createPost" element={<CreatePost />} />
           <Route path="/" element={<MainPage />} />
         </Routes>
       </div>
