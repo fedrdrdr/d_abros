@@ -1,7 +1,7 @@
 import React from 'react';
-import Footer from '../components/Footer';
-import WorksContainer from '../components/WorksContainer';
-import Header from '../components/Header';
+import Footer from '../../components/Footer/Footer';
+import WorksContainer from '../../components/WorkCard/WorksContainer';
+import Header from '../../components/Header/Header';
 
 const MainPage: React.FC = () => {
   return (

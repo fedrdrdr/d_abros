@@ -2,8 +2,8 @@ import { useEffect, useState } from 'react';
 import WorkCard from './WorkCard';
 import { styled } from '@mui/system';
 import { Container, Grid } from '@mui/material';
-import { getPosts } from '../components/auth/firebaseUtils';
-import { Post } from '../assets/types';
+import { getPosts } from '../auth/firebaseUtils';
+import { Post } from '../../assets/types';
 
 function WorksContainer() {
 
