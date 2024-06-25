@@ -1,5 +1,5 @@
 import { styled } from '@mui/system';
-import logo from '../logo.jpg';
+import logo from '../../assets/images/logo.jpg';
 
 const LogoContainer = styled('div')({
   display: 'flex',

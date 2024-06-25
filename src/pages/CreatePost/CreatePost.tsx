@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { addPost } from '../components/auth/firebaseUtils';
+import { addPost } from '../../components/auth/firebaseUtils';
 import { Button, TextField, Typography, CircularProgress, Snackbar, Alert } from '@mui/material';
 import { styled } from '@mui/system';
 
