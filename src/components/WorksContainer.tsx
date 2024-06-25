@@ -13,14 +13,16 @@ function WorksContainer() {
   });
 
   const [posts, setPosts] = useState<Post[]>([]);
+  const fetchPosts = async () => {
+    const fetchedPosts = await getPosts();
+     setPosts(fetchedPosts);
+  };
+
   useEffect(() => {
-    const fetchPosts = async () => {
-      const fetchedPosts = await getPosts();
-      setPosts(fetchedPosts);
-    };
+
 
     fetchPosts();
-  }, []);
+  }, [ ]);
 
   return (
     <WorksContainer>
